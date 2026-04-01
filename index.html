@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchPad — Build Your Startup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">L</div>
+            <div class="loader-bar"><div class="loader-progress" id="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">LaunchPad</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-ghost">Log In</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#how-it-works" class="mobile-link">How It Works</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#" class="btn btn-primary" style="width:100%;text-align:center;margin-top:1rem;">Get Started</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge" data-animate="fade-up">
+                <span class="badge-dot"></span>
+                Trusted by 10,000+ founders worldwide
+            </div>
+            <h1 class="hero-title" data-animate="fade-up" data-delay="0.1">
+                Turn Your <span class="text-gradient">Vision</span> Into<br>
+                a Thriving <span class="text-gradient">Startup</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="0.2">
+                The all-in-one platform that takes you from idea to launch.
+                AI-powered tools, expert mentorship, and funding connections —
+                everything you need to build something extraordinary.
+            </p>
+            <div class="hero-actions" data-animate="fade-up" data-delay="0.3">
+                <a href="#" class="btn btn-large btn-primary">
+                    Start Building Free
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#" class="btn btn-large btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Watch Demo
+                </a>
+            </div>
+            <div class="hero-stats" data-animate="fade-up" data-delay="0.4">
+                <div class="hero-stat">
+                    <div class="hero-stat-avatars">
+                        <div class="avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">A</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">B</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">C</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">D</div>
+                    </div>
+                    <span>2,400+ startups launched this month</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" data-animate="fade-up" data-delay="0.6">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>Y Combinator</span><span class="marquee-dot">◆</span>
+                <span>Sequoia Capital</span><span class="marquee-dot">◆</span>
+                <span>Andreessen Horowitz</span><span class="marquee-dot">◆</span>
+                <span>Accel Partners</span><span class="marquee-dot">◆</span>
+                <span>Benchmark</span><span class="marquee-dot">◆</span>
+                <span>Greylock Partners</span><span class="marquee-dot">◆</span>
+                <span>Lightspeed Venture</span><span class="marquee-dot">◆</span>
+                <span>Index Ventures</span><span class="marquee-dot">◆</span>
+                <span>Y Combinator</span><span class="marquee-dot">◆</span>
+                <span>Sequoia Capital</span><span class="marquee-dot">◆</span>
+                <span>Andreessen Horowitz</span><span class="marquee-dot">◆</span>
+                <span>Accel Partners</span><span class="marquee-dot">◆</span>
+                <span>Benchmark</span><span class="marquee-dot">◆</span>
+                <span>Greylock Partners</span><span class="marquee-dot">◆</span>
+                <span>Lightspeed Venture</span><span class="marquee-dot">◆</span>
+                <span>Index Ventures</span><span class="marquee-dot">◆</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Everything You Need to<br><span class="text-gradient">Launch & Scale</span></h2>
+                <p class="section-subtitle">Powerful tools designed for founders who move fast and think big.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large" data-animate="fade-up" data-delay="0.1">
+                    <div class="feature-3d-container" id="feature-3d-1"></div>
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>AI Business Builder</h3>
+                        <p>Generate business plans, pitch decks, and financial models in minutes with our AI engine trained on 50,000+ successful startups.</p>
+                        <a href="#" class="feature-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="feature-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb22, #f5576c22); color: #f5576c;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Expert Mentorship</h3>
+                    <p>Connect with 500+ vetted mentors from top companies like Google, Meta, and Stripe for 1-on-1 guidance.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe22, #00f2fe22); color: #4facfe;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Funding Network</h3>
+                    <p>Access our network of 200+ VCs and angel investors actively looking to fund early-stage startups like yours.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card" data-animate="fade-up" data-delay="0.15">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b22, #38f9d722); color: #43e97b;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3>Validation Suite</h3>
+                    <p>Test your idea with real users before you build. Survey tools, landing page builders, and analytics built in.</p>
+                    <a href="#" class="feature-link">Learn more →</a>
+                </div>
+                <div class="feature-card feature-card-large" data-animate="fade-up" data-delay="0.25">
+                    <div class="feature-3d-container" id="feature-3d-2"></div>
+                    <div class="feature-card-content">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #a18cd122, #fbc2eb22); color: #a18cd1;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Launch Toolkit</h3>
+                        <p>Legal templates, incorporation tools, equity management, and everything you need to go from zero to launch day with confidence.</p>
+                        <a href="#" class="feature-link">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">From Idea to Launch<br>in <span class="text-gradient">3 Simple Steps</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step" data-animate="fade-up" data-delay="0.1">
+                    <div class="step-number">01</div>
+                    <div class="step-3d" id="step-3d-1"></div>
+                    <h3>Define Your Vision</h3>
+                    <p>Tell our AI about your idea. It analyzes market fit, competition, and opportunity to refine your concept into a viable business model.</p>
+                </div>
+                <div class="step-connector" data-animate="fade-up" data-delay="0.15">
+                    <svg width="100" height="2"><line x1="0" y1="1" x2="100" y2="1" stroke="url(#grad)" stroke-width="2" stroke-dasharray="8 4"/><defs><linearGradient id="grad"><stop offset="0%" stop-color="#667eea"/><stop offset="100%" stop-color="#764ba2"/></linearGradient></defs></svg>
+                </div>
+                <div class="step" data-animate="fade-up" data-delay="0.2">
+                    <div class="step-number">02</div>
+                    <div class="step-3d" id="step-3d-2"></div>
+                    <h3>Build & Validate</h3>
+                    <p>Use our toolkit to create MVPs, test with real users, iterate based on data, and connect with mentors who've built similar products.</p>
+                </div>
+                <div class="step-connector" data-animate="fade-up" data-delay="0.25">
+                    <svg width="100" height="2"><line x1="0" y1="1" x2="100" y2="1" stroke="url(#grad2)" stroke-width="2" stroke-dasharray="8 4"/><defs><linearGradient id="grad2"><stop offset="0%" stop-color="#764ba2"/><stop offset="100%" stop-color="#f5576c"/></linearGradient></defs></svg>
+                </div>
+                <div class="step" data-animate="fade-up" data-delay="0.3">
+                    <div class="step-number">03</div>
+                    <div class="step-3d" id="step-3d-3"></div>
+                    <h3>Launch & Scale</h3>
+                    <p>Go live with our launch toolkit, connect with investors in our network, and scale with ongoing AI-powered growth strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid" data-animate="fade-up">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="12500">0</div>
+                    <div class="stat-label">Startups Launched</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="850">0</div>
+                    <div class="stat-suffix">M</div>
+                    <div class="stat-label">Funding Raised</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="94">0</div>
+                    <div class="stat-suffix">%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="140">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Founders Who <span class="text-gradient">Made It Happen</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"LaunchPad's AI helped us refine our pitch deck and within 2 weeks we closed a $2.5M seed round. Absolutely game-changing."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">SM</div>
+                        <div>
+                            <div class="testimonial-name">Sarah Mitchell</div>
+                            <div class="testimonial-role">CEO, Nexflow — Series A</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.2">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"We went from a napkin sketch to 10K users in 3 months. The validation tools alone saved us 6 months of guesswork."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">JK</div>
+                        <div>
+                            <div class="testimonial-name">James Kim</div>
+                            <div class="testimonial-role">Co-founder, Veloq — YC W24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"The mentor network is incredible. My mentor helped me navigate enterprise sales and land our first Fortune 500 client."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">AP</div>
+                        <div>
+                            <div class="testimonial-name">Aisha Patel</div>
+                            <div class="testimonial-role">Founder, CloudSync — $8M raised</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Start Free. <span class="text-gradient">Scale Unlimited.</span></h2>
+                <p class="section-subtitle">No credit card required. Upgrade anytime as you grow.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-animate="fade-up" data-delay="0.1">
+                    <div class="pricing-name">Starter</div>
+                    <div class="pricing-price">$0<span>/mo</span></div>
+                    <p class="pricing-desc">Perfect for validating your idea</p>
+                    <ul class="pricing-features">
+                        <li>AI Business Plan Generator</li>
+                        <li>Basic Market Analysis</li>
+                        <li>Community Access</li>
+                        <li>1 Landing Page Builder</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; text-align: center;">Get Started</a>
+                </div>
+                <div class="pricing-card pricing-card-featured" data-animate="fade-up" data-delay="0.2">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-name">Growth</div>
+                    <div class="pricing-price">$49<span>/mo</span></div>
+                    <p class="pricing-desc">For founders ready to build</p>
+                    <ul class="pricing-features">
+                        <li>Everything in Starter</li>
+                        <li>Advanced AI Tools & Pitch Deck</li>
+                        <li>Mentor Matching (3/month)</li>
+                        <li>Investor Network Access</li>
+                        <li>Legal Templates & Incorporation</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Start Free Trial</a>
+                </div>
+                <div class="pricing-card" data-animate="fade-up" data-delay="0.3">
+                    <div class="pricing-name">Scale</div>
+                    <div class="pricing-price">$149<span>/mo</span></div>
+                    <p class="pricing-desc">For teams scaling fast</p>
+                    <ul class="pricing-features">
+                        <li>Everything in Growth</li>
+                        <li>Unlimited Mentor Sessions</li>
+                        <li>Direct VC Introductions</li>
+                        <li>Custom Financial Modeling</li>
+                        <li>Team Collaboration (up to 10)</li>
+                        <li>Dedicated Account Manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline" style="width: 100%; text-align: center;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card" data-animate="fade-up">
+                <canvas id="cta-canvas"></canvas>
+                <div class="cta-content">
+                    <h2>Ready to Build the<br>Next Big Thing?</h2>
+                    <p>Join 10,000+ founders already using LaunchPad to turn their vision into reality. Start for free today.</p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn btn-large btn-white">
+                            Start Building Free
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#" class="btn btn-large btn-ghost-white">Talk to Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">LaunchPad</span>
+                    </a>
+                    <p>The all-in-one platform for founders who build the future.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">𝕏</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">▶</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">AI Tools</a>
+                    <a href="#">Integrations</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Guides</a>
+                    <a href="#">Templates</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaunchPad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
